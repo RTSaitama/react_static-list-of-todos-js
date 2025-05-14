@@ -1,5 +1,9 @@
-import { TodoInfo } from '../TodoInfo/TodoInfo';
+import { TodoInfo } from '../TodoInfo';
 
-export const TodoList = ({ todos }) => {
-  return todos.map(todo => <TodoInfo todo={todo} key={todo.id} />);
-};
+export const TodoList = ({ todos }) => (
+  <section className="ToDoList">
+    {todos.map(todo => (
+      <TodoInfo todo={todo} key={todo.id} />
+    ))}
+  </section>
+);
